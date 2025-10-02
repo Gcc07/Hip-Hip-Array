@@ -1,6 +1,7 @@
 /* Filename: MaxDifference
  * Date: 9/30/2025
  * Author: Gabriel Cardenas
+ * Description: A program that prints the difference between a maximum and a minimum of a collection of provided numbers.
  */
 
 import java.util.Scanner;
