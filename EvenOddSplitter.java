@@ -1,42 +1,33 @@
-/*
-Name: Gabriel Cardenas
-Date: 10/2/25
-Description:  (Briefly describe what the program does)
-*/
-
-/* Filename: ArrayCreationLab
- * Date: 9/30/2025
+/* Filename: EvenOddSplitter
+ * Date: 10/2/25
  * Author: Gabriel Cardenas
+ * Description: A program that takes an input from the user, and returns the odd and even numbers.
  */
+
+
 
 import java.util.Scanner;
 
 public class EvenOddSplitter {
     public static Scanner scanner = new Scanner(System.in);
     
-    public static String getInput(String prompt) {
+    public static String getInput(String prompt) { 
         System.out.print(prompt);
         return scanner.nextLine();
     }
-
-    public static int getIntInpEut(String prompt) {
-        System.out.print(prompt);
-        int value = scanner.nextInt();
-        scanner.nextLine();
-        return value;
-    }
-
+    // Function that returns the evens in a provided array
     public static int[] getEvens(int[] nums) {
         int evenCounter = 0;
         int indexCounter = 0;
+        // get amount of evens within the array
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] % 2 == 0) {
                 evenCounter += 1;
             }
         }
-        int[] evenArray = new int[evenCounter];
+        int[] evenArray = new int[evenCounter]; // Initialize the list of evens w/ the size of the amount of evens.
 
-        for (int i = 0; i < nums.length; i++) {
+        for (int i = 0; i < nums.length; i++) { // Fill even array.
             if (nums[i] % 2 == 0) {
                 evenArray[indexCounter] = nums[i];
                 indexCounter += 1;
@@ -44,7 +35,7 @@ public class EvenOddSplitter {
         }
         return evenArray;
     }
-
+    // Function that returns the odds in a provided array (Same as even, only changing the division logic.)
     public static int[] getOdds(int[] nums) {
         int oddCounter = 0;
         int indexCounter = 0;
